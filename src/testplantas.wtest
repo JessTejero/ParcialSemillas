@@ -1,0 +1,13 @@
+import plantas.*
+import parcelas.*
+
+
+test "testX" {
+	const mentita = new Menta(altura = 1 , anoDeObtencion= 2009)
+	const mentita2 = new Menta(altura = 0.3 , anoDeObtencion= 2010)
+	
+	assert.that(mentita.daNuevasSemillas())
+	assert.equals(3,mentita.espacioQueOcupa())
+	assert.that(not mentita2.daNuevasSemillas())
+	assert.equals(0.9,mentita2.espacioQueOcupa())
+}

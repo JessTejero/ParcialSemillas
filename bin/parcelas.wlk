@@ -35,7 +35,13 @@ class Parcela {
 		else self.error("No cumple los requisitos para plantar")
 	}
 	
+	method mayorAltura(medida){
+		return plantas.contains({planta => planta.altura() > medida})
+	}
 	
+	method cantidadDePlantas(){
+		return plantas.size()
+	}
 	
 	
 	
