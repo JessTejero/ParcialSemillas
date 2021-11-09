@@ -70,3 +70,16 @@ class Quinoa inherits Planta {
 	
 }
 
+
+class SojaTransgenica inherits Soja{
+	override method daNuevasSemillas(){
+		return false 
+	}
+}
+
+class HierbaBuena inherits Menta {
+	
+	override method espacioQueOcupa(){
+		return (altura * 3) * 2
+	}
+}
