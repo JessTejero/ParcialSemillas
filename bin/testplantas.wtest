@@ -1,5 +1,5 @@
 import plantas.*
-import parcelas.*
+import variedades.*
 
 
 test "testX" {
@@ -10,4 +10,17 @@ test "testX" {
 	assert.equals(3,mentita.espacioQueOcupa())
 	assert.that(not mentita2.daNuevasSemillas())
 	assert.equals(0.9,mentita2.espacioQueOcupa())
+	
+	const sojita = new Soja(altura= 0.6 , anoDeObtencion= 2009 )
+	
+	assert.equals(7, sojita.horasDeSolQueTolera())
+	assert.that(not sojita.daNuevasSemillas())
+	assert.equals(0.3, sojita.espacioQueOcupa())
+	
+	const quinoa1 = new Quinoa(altura= 0.4 , anoDeObtencion= 2010 , horasDeSolQueTolera= 12)
+	const quinoa2 = new Quinoa(altura= 1.0 , anoDeObtencion= 2001 , horasDeSolQueTolera= 9 )
+	
+	
+	assert.that(quinoa1.daNuevasSemillas())
+	assert.that(quinoa2.daNuevasSemillas())
 }

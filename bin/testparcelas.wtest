@@ -1,0 +1,17 @@
+import parcelas.*
+import asociacion.*
+import inta.*
+
+
+test "testX" {
+	
+	const parcela = new Parcela 
+	
+	
+	
+	
+	
+	
+	assert.that(true)
+
+}
