@@ -1,17 +1,27 @@
 import parcelas.*
 import asociacion.*
 import inta.*
+import plantas.*
 
 
 test "testX" {
 	
-	const parcela = new Parcela 
-	
-	
-	
-	
-	
-	
-	assert.that(true)
+	const parcela = new Parcela(ancho =20,largo =1,horasDeSol= 10)
 
+    assert.equals(20,parcela.superficie())
+    assert.equals(4,parcela.cantidadMaximaQueTolera())
+
+    const sojita = new Soja(altura=1 , anoDeObtencion= 2010)
+    
+    sojita.horasDeSolQueTolera()
+    parcela.plantas([sojita,sojita,sojita,sojita])
+
+    //assert.throwsException(parcela.plantarUnaPlanta(sojita))
+
+    const parcela1 = new ParcelaEcologica(ancho =10,largo =2,horasDeSol= 8 )
+    parcela1.agregarPlanta(sojita)
+
+    assert.that(not parcela1.seAsociaBien(sojita))
 }
+
+
